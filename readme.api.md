@@ -1,8 +1,6 @@
 
-git status
-git add .
-git commit -m "1.2 initial commit"
-git push origin main
+git status && git add . && git commit -m "1.3 initial commit" && git push origin main
+
 ----------------------------------------------------------------
 
 

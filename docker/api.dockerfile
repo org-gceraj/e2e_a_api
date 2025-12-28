@@ -11,8 +11,7 @@ WORKDIR /app
 # Copy API source code
 COPY api/ api/
 
-# Copy dependency list first (layer c
-aching)
+# Copy dependency list first (layer caching)
 COPY docker/requirements.api.txt docker/requirements.api.txt
 
 # Install only required dependencies
