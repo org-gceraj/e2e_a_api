@@ -1,0 +1,16 @@
+# Core ML
+numpy
+pandas
+scikit-learn
+joblib
+
+#prometheus
+prometheus-client
+
+# API
+fastapi
+uvicorn
+
+# Experiment tracking
+mlflow==3.7.0
+boto3
