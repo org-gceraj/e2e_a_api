@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 # Copy source code
-COPY app/ app/
+COPY scripts/ scripts/
 
 # Copy dependency list first (layer caching)
 COPY docker/requirements.api.txt docker/requirements.api.txt
@@ -22,4 +22,4 @@ EXPOSE 8000
 EXPOSE 30080
 
 # Start FastAPI server
-CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "scripts.main:app", "--host", "0.0.0.0", "--port", "8000"]
