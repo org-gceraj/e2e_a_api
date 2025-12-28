@@ -1,11 +1,12 @@
 
-git status && git add . && git commit -m "1.3 initial commit" && git push origin main
+git status && git add . && git commit -m "1.4 initial commit" && git push origin main
 
 ----------------------------------------------------------------
 
 
 GIT Bash
 cd /C/Documents/MLOps/E2E_Project/F_All_component_Mlflow
+cd /C/MLOps_V2/Prometheus_GITHUB/C1_API
 
 ----------------------------------------------------------------
 

@@ -1,8 +1,7 @@
 # Base image (stable for ML + FastAPI)
 FROM python:3.10-slim
 
-RUN apt-get update && apt-get install -y \
-    git \
+RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory inside container

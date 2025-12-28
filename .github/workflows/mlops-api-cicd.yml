@@ -40,6 +40,11 @@ jobs:
       run: |
         docker push ${{ secrets.DOCKER_USERNAME }}/e2e_v1-api:${{ env.TS }}
 
+    - name: Tag image as latest
+      run: |
+        docker tag ${{ secrets.DOCKER_USERNAME }}/e2e_v1-api:${{ env.TS }} ${{ secrets.DOCKER_USERNAME }}/e2e_v1-api:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/e2e_v1-api:latest
+
   # =============================
   # JOB 2: Deploy to Kubernetes
   # =============================
