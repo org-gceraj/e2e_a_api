@@ -14,7 +14,6 @@ COPY api/ api/
 # Copy dependency list first (layer c
 aching)
 COPY docker/requirements.api.txt docker/requirements.api.txt
-COPY dvc.yaml .
 
 # Install only required dependencies
 RUN pip install --no-cache-dir -r docker/requirements.api.txt

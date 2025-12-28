@@ -1,3 +1,11 @@
+
+git status
+git add .
+git commit -m "1.2 initial commit"
+git push origin main
+----------------------------------------------------------------
+
+
 GIT Bash
 cd /C/Documents/MLOps/E2E_Project/F_All_component_Mlflow
 
