@@ -8,8 +8,8 @@ RUN apt-get update && apt-get install -y \
 # Set working directory inside container
 WORKDIR /app
 
-# Copy API source code
-COPY api/ api/
+# Copy source code
+COPY app/ app/
 
 # Copy dependency list first (layer caching)
 COPY docker/requirements.api.txt docker/requirements.api.txt
