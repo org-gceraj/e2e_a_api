@@ -69,7 +69,11 @@ jobs:
           --from-literal=AWS_DEFAULT_REGION=${{ secrets.AWS_DEFAULT_REGION }} \
           --dry-run=client -o yaml | kubectl apply -f -
 
-    - name: Deploy to Kubernetes
+    - name: Deployment to Kubernetes
       run: |
         kubectl apply -f k8s/api-deployment.yaml
+
+    - name: Service to Kubernetes
+      run: |
+        kubectl apply -f k8s/api-service.yaml
 

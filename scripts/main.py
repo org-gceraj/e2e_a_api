@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import joblib
 import os
 import boto3
+from prometheus_fastapi_instrumentator import Instrumentator
 
 S3_BUCKET="aws-s3-bucket-dec-15"
 S3_KEY="files/md5/6a/a096473ff0f3998d7429f7f1636221"
@@ -40,3 +41,9 @@ def predict(request: PredictionRequest):
     prediction = model.predict(vec)[0]
     return {"prediction": prediction}
 
+# --- Define your endpoints here ---
+@app.get("/")
+async def read_root():
+    return {"message": "Welcome to the FastAPI application!"}
+
+Instrumentator().instrument(app).expose(app, endpoint="/metrics")
